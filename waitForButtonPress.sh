@@ -19,6 +19,7 @@ do
  value=$(gpio read 5)
  echo $value
  sleep 0.1
+ clear
 done
 
 while [ $value -eq  0 ]
@@ -27,5 +28,6 @@ do
  value=$(gpio read 5)
  echo $value
  sleep 0.1
+ clear
 done
 

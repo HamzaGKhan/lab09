@@ -1,15 +1,10 @@
 #!/bin/bash
 #Pin 0 RED 1 GREEN 2 YELLOW 3 BLUE
-toBinary(){
-    local n bit
-    for (( n=$1 ; n>0 ; n >>= 1 )); do  bit="$(( n&1 ))$bit"; done
-    printf "%s\n" "$bit"
-}
 
 echo "Enter a value between 0-15" 
 echo "The value entered is $1"
-echo toBinary $1
-if [ $1 gt 15 ]
+
+if [ $1 -gt 15 ]
 then
         echo "Error number is not within the range of 0 - 15"
 fi
